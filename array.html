@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <input type="text" id="txtValue" >
+  <input type="button" id="butAdd" value="Add" onclick="add()" >
+  <input type="button" id="butDis" value="Display" onclick="display()">
+  <div id="result"></div>
+  <script>
+    var array = new Array();
+
+    function add() {
+      var txt=document.getElementById("txtValue");
+      var txtValue=txt.value;
+      array.push(txtValue);
+    }
+
+    function display() {
+      var s="";
+      for (var i=0;i<array.length;i++){
+        s=s+array[i]+" ";
+      }
+      document.getElementById("result").innerHTML=s;
+    }
+  </script>
+</body>
+</html>
